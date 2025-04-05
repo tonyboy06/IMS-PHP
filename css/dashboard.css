@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard-sidebar {
+    width: 20%;
+    background: rgb(48, 48, 255);
+    min-height: 100%;
+    text-align: center;
+}
+
+.dashboard-logo {
+    font-size: 60px;
+    color: yellow;
+    font-weight: 500;
+}
+
+.dashboard-user {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px 40px;
+    margin: 0 auto;
+    border-bottom: 1px solid yellow;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.dashboard-user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid yellow
+}
+
+.dashboard-user span {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#dashboard-user-name {
+    font-size: 13px;
+}
+
+.dashboard-menu {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dashboard-menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dashboard-menu ul li {
+    list-style-type: none;
+}
+
+.dashboard-menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    color: white;
+    padding: 10px 10px 10px 30px;
+}
+
+.dashboard-menu ul li a i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.dashboard-menu ul li a:hover {
+    background-color: yellow;
+    color: blue;
+    font-weight: bold;
+}
+
+
+.dashboard-menu ul li a i:hover {
+    color: blue;
+}
+
+
+.dashboard-content-container {
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+}
+
+.dashboard-topNav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: white;
+}
+
+.dashboard-topNav a {
+    text-decoration: none;
+    color: gray;
+}
+
+.dashboard-topNav a i {
+    margin-right: 5px;
+}
+
+.dashboard-content {
+    display: block;
+    color: gray;
+    padding: 30px 10px 10px 10px;
+}
+
+.dashboard-content-main {
+    height: 100%;
+    min-height: 598px;
+    background-color: white;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 1440px) {
+    .dashboard-content-main {
+        min-height: 100vh;
+    }
+}
+
+/* add user style */
+
+.add-user-row {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.user-table-header {
+    font-size: 22px;
+    padding: 5px 10px;
+    border-left: 5px solid yellow;
+    color: black;
+    text-transform: capitalize;
+}
+
+.user-table-header i {
+    color: blue;
+    padding-right: 5px;
+}
+
+
+.col-5{
+    width: 39%;
+}
+
+.col-7 {
+    width: 59%;
+}
+
+@media only screen and (max-width: 900px) {
+    .dashboard-content-main {
+        width: 100%;
+    }
+
+    
+    .dashboard-sidebar {
+        width: 1%;
+        display: none;
+    }
+    
+    .col-5 {
+        width: 100%;
+    }
+    
+    .col-7 {
+        width: 100%;
+    }
+}
+
+.appForm {
+    border: 1px solid rgb(211, 211, 211);
+    background-color: rgb(231, 231, 231);
+    display: block;
+    width: 90%;
+    margin: 50px auto 20px auto;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 2px;
+    text-align: right;
+}
+
+.appForm .input-group label {
+    display: block;
+    text-transform: capitalize;
+    text-align: left;
+    margin: 8px 0;
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.appForm .input-group input {
+    width: 100%;
+    padding: 6px 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.appForm button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
+    background-color: yellow;
+    color: blue;
+    font-weight: bold;
+}
+
+.user-total {
+    text-align: right;
+    margin-right: 30px;
+    padding: 10px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+.user-table {
+    text-align: left;
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.user-table th {
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 200px;
+}
+
+.user-table th:first-child {
+    width: 20px;
+}
+
+.user-table td {
+    font-size: 13px;
+}
+
+.user-table th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 2px 2px;
+}
+
+.user-table tr:nth-child(even) {
+    background: #dddddd;
+}
+
+@media only screen and (max-width: 2000px) {
+    .user-table {
+        overflow-y:scroll;
+        height: 400px;
+        display:block;
+    }
+    
+}
+
+.response-msg {
+    text-align: center;
+    color: black;
+    animation-name: addUser;
+    animation-duration: 4s;
+    opacity: 0;
+    width: 100%;
+}
+
+.response-msg-success {
+    background-color: rgb(214, 247, 214);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 1s;
+
+}
+
+.response-msg-error {
+    background-color: rgb(248, 204, 204);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+@keyframes addUser {
+    0% {opacity: 1; }
+    25% {opacity: 1;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
